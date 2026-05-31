@@ -93,9 +93,6 @@ function atualiza() {
 
   const src = `images/mapa/${image}`;
   if ($('#mapa').attr('src') !== src) $('#mapa').attr('src', src);
-
-  $('body').scrollTop($(document).height() / 2 - $(window).height() / 2);
-  $('body').scrollLeft($(document).width() / 2 - $(window).width() / 2);
 }
 
 $(function () {
@@ -142,10 +139,6 @@ $(function () {
       $('.link').slideToggle(900);
       $('.marker').fadeIn(1100);
     });
-    $('body, html').animate({
-      scrollTop:  $(document).height() / 2 - $(window).height() / 2,
-      scrollLeft: $(document).width()  / 2 - $(window).width()  / 2,
-    }, 1500);
   });
 
   $(window).on('resize', function () {

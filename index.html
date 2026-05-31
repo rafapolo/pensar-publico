@@ -7,27 +7,35 @@
 	<meta name="description" content="Centro Carioca de Design | Praça Tiradentes | 20'jan a 9'fev">
 	<meta name="google-site-verification" content="qroc1y7-BuJFndaQU3iSBWRbCeVtjPrnHzu_-kG5JNA" />		
 	<style type="text/css">
-		body {
-			height: 100%; padding: 0px;
-			margin: 0px; overflow:hidden; 
+		html, body {
+			width: 100%; height: 100%;
+			margin: 0; padding: 0;
+			overflow: hidden;
 			background-color: black;
 		}
 		p {
 			z-index:2;
-			font-size:30px; font-family:arial, helvetica; 
+			font-size:30px; font-family:arial, helvetica;
 			color:white; font-weight: bold; letter-spacing: 1px;
 			text-shadow: 1px 1px 4px black
 		}
+		#expo {
+			position: fixed;
+			top: 0; left: 0;
+			width: 100vw; height: 100vh;
+		}
 		#loading {font-size:15px; margin:10px}
-		#info-text {position: fixed; width: 940px; margin: 10px; margin-top: 80px; display:none}		
-		#time-text { position: fixed; width: 40%; margin-top: 80px; display:none; text-align:right}				
+		#info-text {position: fixed; width: 940px; margin: 10px; margin-top: 80px; display:none}
+		#time-text { position: fixed; width: 40%; margin-top: 80px; display:none; text-align:right}
 		#sobre-text {position: fixed; bottom: 0px; margin: 10px; width: 80%; margin-bottom: 80px; display:none;}
 		#video {bottom: 0px}
-		#video-box {display: none; position:absolute; margin:0px;}		
-		#sobre {bottom: 0px}		
-		#mapa { display: none;
-				-webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none;
-				-ms-user-select: none; -o-user-select: none; user-select: none;
+		#video-box {display: none; position:absolute; margin:0px;}
+		#sobre {bottom: 0px}
+		#mapa {
+			display: none;
+			width: 100%; height: 100%;
+			object-fit: cover;
+			user-select: none;
 		}
 		.link {cursor:pointer; display:none; margin: 10px; position:fixed;}
 		.link:hover {border-bottom: 2px solid white}
@@ -35,8 +43,8 @@
 		.box {position:absolute; display:none; z-index:1;}
 		.boxContext {float: left;}
 		.boxTitle {font-size: 24px; padding: 10px; font-weight: bold;}
-		.contexto {font-weight: bold; text-align:right; width:50px;}			
-		.dados {position:absolute; width:300px; font-family:arial; color:black; font-size:13px; text-shadow:none; display:none; z-index:1;}	
+		.contexto {font-weight: bold; text-align:right; width:50px;}
+		.dados {position:absolute; width:300px; font-family:arial; color:black; font-size:13px; text-shadow:none; display:none; z-index:1;}
 	</style>
 		<script defer src="dist/bundle.js"></script>
 	</head>
