@@ -98,12 +98,10 @@ function atualiza() {
 $(function () {
   $('#video').on('click', function () {
     if ($('#video-box').css('display') === 'none') {
-      $('#video-box').css({
-        left: $('#mapa').width() / 2 - $('#video-box').width() / 2,
-        top:  $('#mapa').height() / 2 - $('#video-box').height() / 2,
-      }).fadeIn(600);
+      $('#player').attr('src', $('#player').data('src'));
+      $('#video-box').fadeIn(600);
     } else {
-      $('#video-box').fadeOut(600);
+      $('#video-box').fadeOut(600, function () { $('#player').removeAttr('src'); });
     }
   });
 
